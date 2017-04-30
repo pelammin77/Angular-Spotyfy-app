@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    FooterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
