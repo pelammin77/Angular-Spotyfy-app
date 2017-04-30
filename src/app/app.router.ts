@@ -7,10 +7,9 @@ import {AboutComponent} from './about/about.component';
 
 
 export const router: Routes = [
-    { path: '', redirectTo:'search', pathMatch:'full' },
+    { path: '', redirectTo: 'search', pathMatch:'full' },
     { path: 'search',  component: SearchComponent},
-      { path: 'about',  component: AboutComponent}
-
-
-
+    { path: 'about',  component: AboutComponent}
 ];
+
+export const routes: ModuleWithProviders = RouterModule.forRoot(router);
