@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SpotyfyApiService } from '../spotyfy-api.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 searchStr: string;
-  constructor() { }
+  constructor(private _apiService: SpotyfyApiService) { }
 
   ngOnInit() {
   }
