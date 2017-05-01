@@ -7,8 +7,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Spotyfy app</a>
+        <a class="navbar-brand" routerLink="welcome">Spotyfy app</a> <!-- katso huom alhaalta   -->
+
            </div>
+
         <div class="collapse navbar-collapse" id="navbar"  name="navbar">
             <ul class="nav navbar-nav">
               <li> <a routerLink="search"> Haku</a> </li>
@@ -18,3 +20,13 @@
       </div>
     </nav>
 
+<!--
+Huom 
+
+jos käytetään routing.ts tiedossa  Welcome-kompon uudelleen ohjausta on käytettävä <a class="navbar-brand" href="#">Spotyfy app</a>
+   Tämä tapa tosin toimii nytkin. 
+   Ero:Lataa welcome sivun uudestaan palvelimelta(reload) kun painetaan linkkiä 
+   Nyt Angular vain vaihtaa komponentin,  eikä lataa sitä palvelimelta 
+
+
+  -->
