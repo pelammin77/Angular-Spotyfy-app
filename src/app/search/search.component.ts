@@ -7,13 +7,14 @@ import { SpotyfyApiService } from '../spotyfy-api.service';
 })
 export class SearchComponent implements OnInit {
 searchStr: string;
+hakuService: SpotyfyApiService;
   constructor(private _apiService: SpotyfyApiService) { }
 
   ngOnInit() {
   }
 
   haeMusaa(){
-
+      this._apiService.haku(this.searchStr);
     console.log(this.searchStr);
 
   }
