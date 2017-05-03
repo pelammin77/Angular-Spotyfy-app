@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map';
 export class SpotyfyApiService {
 
   hakuUrl: string;
+  artistUrl: string;
+  albumitUrl: string;
   constructor(private _HTTP: Http) {
 
 console.log('Api Service käynistetty');
@@ -15,9 +17,24 @@ console.log('Api Service käynistetty');
 
   haku(hakuSana: string, type: string = 'artist' ){
     this.hakuUrl = 'https://api.spotify.com/v1/search?query=' + hakuSana + '&offset=0&limit=20&type=' + type;
-    console.log(this.hakuUrl);
    return  this._HTTP.get(this.hakuUrl)
    .map(res => res.json());
   }
+
+  getArtist(id){
+    
+     console.log('Artistin tietojen haku palvelua kutsuttiin');
+      this.artistUrl = 'https://api.spotify.com/v1/artists/' + id;
+      console.log(this.artistUrl);
+    return  this._HTTP.get(this.artistUrl)
+   .map(res => res.json());
+  }
+
+  getAlbumit(id){
+
+ return  this._HTTP.get(this.hakuUrl)
+   .map(res => res.json());
+  }
+
 
 }
