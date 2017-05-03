@@ -13,7 +13,7 @@ import { Albumi } from '../classses/Albumi';
 export class ArtistComponent implements OnInit {
   
   id: string;
-  artist: Artisti[];
+  artisti: Artisti[];
   albums: Albumi[];
 
   constructor(
@@ -31,8 +31,8 @@ export class ArtistComponent implements OnInit {
             .subscribe((id) => {
                 this._apiService.getArtist(id)
                     .subscribe(artist => {
-                        this.artist = artist;
-                      console.log(this.artist);
+                        this.artisti = artist;
+                      console.log(this.artisti);
                 
                 })
                  /*
