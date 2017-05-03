@@ -13,8 +13,8 @@ import { Albumi } from '../classses/Albumi';
 export class ArtistComponent implements OnInit {
   
   id: string;
-  artisti: Artisti[];
-  albums: Albumi[];
+  artisti: any[];
+  albums: any[];
 
   constructor(
         private _apiService: SpotyfyApiService,
