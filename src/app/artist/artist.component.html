@@ -8,6 +8,15 @@
             Genres: <span *ngFor="let genre of artisti.genres">{{genre}}</span>
         </p>
     </header> 
+
+      <div class="artistin-albumit">
+         <div class="row">
+            <div *ngFor="let albumi of albumit">
+              {{albumi.name}}
+
+            </div>
+         </div>
+      </div>
 </div>
 
 

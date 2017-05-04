@@ -8,5 +8,9 @@
 
 .artisti-thumb{
     width: 200px;
+    height: auto;
+   float:  auto;
+    margin-left: 10px;
+    
 
 }

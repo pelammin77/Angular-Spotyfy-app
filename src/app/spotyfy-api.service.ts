@@ -30,9 +30,11 @@ console.log('Api Service käynistetty');
    .map(res => res.json());
   }
 
-  getAlbumit(id){
-
- return  this._HTTP.get(this.hakuUrl)
+  getAlbumit(artistinId){
+    console.log("haetaan albumit");
+ this.albumitUrl = 'https://api.spotify.com/v1/artists/'+artistinId+'/albums';
+ console.log(this.albumitUrl);
+ return  this._HTTP.get(this.albumitUrl)
    .map(res => res.json());
   }
 

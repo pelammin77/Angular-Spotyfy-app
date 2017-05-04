@@ -14,7 +14,7 @@ export class ArtistComponent implements OnInit {
   
   id: string;
   artisti: any[];
-  albums: any[];
+  albumit: any[];
 
   constructor(
         private _apiService: SpotyfyApiService,
@@ -32,14 +32,12 @@ export class ArtistComponent implements OnInit {
                 this._apiService.getArtist(id)
                     .subscribe(artist => {
                         this.artisti = artist;
-                      console.log(this.artisti);
-                
                 })
-                 /*
+                 
                 this._apiService.getAlbumit(id)
                     .subscribe(albums => {
                         this.albumit = albums.items;
-                    })*/
+                    })
             })
 
 // console.log(this.artist);
