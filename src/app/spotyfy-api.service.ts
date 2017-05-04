@@ -16,7 +16,7 @@ console.log('Api Service käynistetty');
    }
 
   haku(hakuSana: string, type: string = 'artist' ){
-    this.hakuUrl = 'https://api.spotify.com/v1/search?query=' + hakuSana + '&offset=0&limit=20&type=' + type;
+    this.hakuUrl = 'https://api.spotify.com/v1/search?query=' + hakuSana + '&offset=0&limit=20&type=' + type + '&market=FI';
    return  this._HTTP.get(this.hakuUrl)
    .map(res => res.json());
   }
