@@ -12,7 +12,17 @@
       <div class="artistin-albumit">
          <div class="row">
             <div *ngFor="let albumi of albumit">
-              {{albumi.name}}
+              
+                <div class="col-sm-3">
+                    <div class="well album">
+                        <div *ngIf="albumi.images.length > 0">
+                            <img class="album-thumb img-thumbnail" src="{{albumi.images[0].url}}">    
+                            <h4>{{albumi.name}}</h4>
+                            <a class="btn btn-default btn-block" >Albumin tiedot</a>
+                        </div>   
+                     </div>    
+                </div>
+                 
 
             </div>
          </div>
