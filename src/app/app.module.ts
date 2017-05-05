@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ArtistComponent } from './artist/artist.component';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ArtistComponent } from './artist/artist.component';
     SearchComponent,
     FooterComponent,
     WelcomeComponent,
-    ArtistComponent
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
