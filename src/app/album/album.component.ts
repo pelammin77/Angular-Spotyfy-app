@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { SpotyfyApiService } from '../spotyfy-api.service';
+
+import { Artisti } from '../classses/Artisti';
+import { Albumi } from '../classses/Albumi';
+
 
 @Component({
   selector: 'app-album',
@@ -6,10 +12,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent implements OnInit {
+  albumi: any[];
 
-  constructor() { }
+  constructor  (private _spotifyService: SpotyfyApiService,
+        private _route:ActivatedRoute) { }
 
   ngOnInit() {
+
+     this._route.params
+            .map(params => params['id'])
+            .subscribe((id) => {
+                this._spotifyService.getAlbumi(id)
+                    .subscribe(album => {
+                        this.albumi = album;
+                    })                               
+            })
   }
 
 }

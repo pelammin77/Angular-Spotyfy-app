@@ -7,6 +7,8 @@ export class SpotyfyApiService {
   hakuUrl: string;
   artistUrl: string;
   albumitUrl: string;
+  albumiUrl: string;
+
   constructor(private _HTTP: Http) {
 
 console.log('Api Service käynistetty');
@@ -37,6 +39,10 @@ console.log('Api Service käynistetty');
  return  this._HTTP.get(this.albumitUrl)
    .map(res => res.json());
   }
-
+    getAlbumi(albuminId){
+      this.albumiUrl = 'https://api.spotify.com/v1/albums/'+ albuminId;
+        return this._HTTP.get(this.albumiUrl)
+            .map(res => res.json());
+    }
 
 }

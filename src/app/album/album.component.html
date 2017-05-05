@@ -1,3 +1,29 @@
-<p>
-  album works!
-</p>
+<div id="albumi" *ngIf="albumi">
+    <header class="albumi-header">
+        <div class="row">
+            <div class="col-md-4">
+                <div *ngIf="albumi.images.length > 0">
+                    <img class="album-thumb" src="{{albumi.images[0].url}}">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h4 *ngIf="albumi.artists.length > 0"><span *ngFor="let artist of albumi.artists">
+                {{artist.name}}
+                </span></h4>
+                <h2>{{albumi.name}}</h2>
+                <h5>Release Date: {{albumi.release_date}}</h5>
+                <a class="btn btn-primary" target="_blank" href="{{albumi.external_urls.spotify}}">Kuuntele Spotifyssa</a> 
+            </div>    
+        </div>    
+    </header>
+    
+    <div class="album-tracks">
+        <h2>Albumin raidat</h2>
+        <div *ngFor="let track of albumi.tracks.items">
+            <div class="well">
+                <h5>{{track.track_number}} - {{track.name}}</h5>
+                <a href="{{track.preview_url}}" target="_blank">näyte</a>    
+            </div>    
+        </div>    
+    </div> 
+</div>

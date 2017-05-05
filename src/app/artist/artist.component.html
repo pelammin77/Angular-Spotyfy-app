@@ -18,7 +18,7 @@
                         <div *ngIf="albumi.images.length > 0">
                             <img class="album-thumb img-thumbnail" src="{{albumi.images[0].url}}">    
                             <h4>{{albumi.name}}</h4>
-                            <a class="btn btn-default btn-block"  routerLink="/album"> Albumin tiedot</a>
+                            <a class="btn btn-default btn-block"  routerLink="/album/{{albumi.id}}"> Albumin tiedot</a>
                         </div>   
                      </div>    
                 </div>
