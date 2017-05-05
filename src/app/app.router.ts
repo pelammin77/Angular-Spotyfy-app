@@ -16,14 +16,16 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {SearchComponent} from './search/search.component';
 import {AboutComponent} from './about/about.component';
 import {ArtistComponent} from './artist/artist.component'; 
-
+import {AlbumComponent} from './album/album.component';
 // Routes- muuttuja pitää sisällään kaikki sivuston sivut ja niiden pathit 
 export const router: Routes = [
     { path: '',        component: WelcomeComponent}, //  root on Welcome komponentti 
     { path: 'welcome', component: WelcomeComponent},
     { path: 'search',  component: SearchComponent},
     { path: 'about',   component: AboutComponent},
-    { path: 'artist/:id', component: ArtistComponent}
+    { path: 'artist/:id', component: ArtistComponent},
+    { path: 'album', component: AlbumComponent}
+
 
 ];
 
