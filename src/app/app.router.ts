@@ -22,7 +22,6 @@ export const router: Routes = [
    // { path: '', redirectTo: 'welcome', pathMatch:'full' },  //pathMatch on oltava full  muutoin jokainen sivu ohjautuu rootiin 
     { path: '',        component: WelcomeComponent}, //  root on Welcome komponentti 
     { path: 'welcome', component: WelcomeComponent},
-   
     { path: 'search',  component: SearchComponent},
     { path: 'about',   component: AboutComponent},
     { path: 'artist/:id', component: ArtistComponent},
